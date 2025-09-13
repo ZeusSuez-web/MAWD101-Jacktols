@@ -8,6 +8,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
 .player {
   background: transparent;
   padding: 20px;
@@ -44,17 +45,43 @@ audio {
 }
 /* Title text (like "Zeus vlog and favorite song") */
 h1 {
-  font-family: 'Poppins', sans-serif;  /* Modern font */
-  font-size: 36px;                     /* Big size */
-  color: #ffffff;                      /* White text */
-  text-align: center;                  /* Keep centered */
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);  /* Glow effect */
-  margin-bottom: 20px;
+  .gradient-text 
+  font-family: 'Copperplate', fantasy;  /* change to your chosen font */
+  font-size: 50px;
+  font-weight: 700;
+  background: linear-gradient(45deg, #f260ff 39%, #6536d3 49%, #e428c4 59%); /* gradient colors */
+  -webkit-background-clip: text;   /* makes gradient show only in text */
+  -webkit-text-fill-color: transparent; /* makes text transparent so gradient shows */
+  text-align: center;
+
+}
+h1 {
+.heartbeat 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px black;
+  text-align: center;
+
+  /* Animation */
+  animation: heartbeat 1.5s infinite;
+}
+
+/* Keyframes for heartbeat */
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.1); }
+  40%  { transform: scale(0.95); }
+  60%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
 }
 
 /* Subtitles (like song names) */
 h3 {
-  font-family: 'Courier New', monospace; /* Different vibe */
+  font-family: 'Courier New', fantasy; /* Different vibe */
   font-size: 22px;
   color: #ffcc00;                         /* Yellow color */
   text-align: center;
@@ -64,7 +91,7 @@ h3 {
 
 /* Paragraphs or extra text */
 p {
-  font-family: 'Display', sans-serif;
+  font-family: 'Montserrat', fantasy;
   font-size: 18px;
   color: #ddd;
   text-align: center;
@@ -73,7 +100,7 @@ p {
   line-height: 1.6;    /* spacing between lines */
 }
 h1 {
-  font-family: 'Orbitron', sans-serif;  /* Futuristic vibe */
+  font-family: 'Micro', ;  /* Futuristic vibe */
 }
 .intro-text {
   position: absolute;   /* take it out of normal flow */
@@ -81,6 +108,15 @@ h1 {
   left: 50%;            /* move to center */
   transform: translateX(-50%); /* perfectly center */
   font-size: 24px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-shadow: 2px 2px 8px black;
+}
+.gradient-text {
+  font-family: 'Game Font', fantasy;  /* change to your chosen font */
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(45deg, #fcfcfc, #f0bb0e); /* gradient colors */
+  -webkit-background-clip: text;   /* makes gradient show only in text */
+  -webkit-text-fill-color: transparent; /* makes text transparent so gradient shows */
+  text-align: center;
 }
